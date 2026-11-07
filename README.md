@@ -1,4 +1,4 @@
-# Laboratorio · Reglas de asociación con Apriori
+# Laboratorio 02 · Reglas de asociación con Apriori
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Xen-04/Portafolio_Mineria_de-_datos/blob/main/2.6_reglas_de_asociacion/lab_apriori_bakery.ipynb)
 
@@ -51,4 +51,15 @@ Las reglas de asociación describen **co-ocurrencias**, no causas. No son un mod
 
 ## Tecnologías
 
-Python · pandas · mlxtend · matplotlib · kagglehub · Google Colab
+Python · pandas · mlxtend · matplotlib · kagglehub · Google Colab}
+
+# Laboratorio 03 · Regresión lineal
+Bloque 1: regresión simple con Breast Cancer Wisconsin (Diagnostic).
+Bloque 2: regresión múltiple con FIFA 19 (players_19.csv, dataset de Stefano Leone).
+Bloque 3: transferencia a mi dataset del Laboratorio 01, Data Science for COVID-19 (DS4C · PatientInfo), con variable objetivo dias_a_alta.
+
+Cada bloque incluye EDA, control de data leakage, multicolinealidad, partición entrenamiento/prueba, métricas (R², MAE, RMSE), análisis de residuos y heterogeneidad.
+
+Para ejecutar el notebook se necesita un secreto KAGGLE_API_TOKEN en Colab Secrets. El token no se incluye en el repositorio.
+
+   | 2.8 · Regresión lineal simple y múltiple | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Xen-04/NOMBRE_DEL_REPO/blob/main/02_8_regresion_lineal/lab_regresion_lineal.ipynb) |
