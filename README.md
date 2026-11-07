@@ -63,3 +63,26 @@ Cada bloque incluye EDA, control de data leakage, multicolinealidad, partición 
 Para ejecutar el notebook se necesita un secreto KAGGLE_API_TOKEN en Colab Secrets. El token no se incluye en el repositorio.
 
    | 2.8 · Regresión lineal simple y múltiple | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Xen-04/NOMBRE_DEL_REPO/blob/main/02_8_regresion_lineal/lab_regresion_lineal.ipynb) |
+
+# Laboratorio 04  · Clustering (K-means y jerárquico)
+
+📁 [`02_10_clustering/lab_2_10_clustering.ipynb`](02_10_clustering/lab_2_10_clustering.ipynb)
+
+Dos ejercicios que recorren el ciclo completo de razonamiento: hipótesis, preparación, ajuste, evaluación con más de una evidencia, interpretación y límites.
+
+| Ejercicio | Método | Dataset | Resultado principal |
+|---|---|---|---|
+| 1 | K-means | [Mall Customer Segmentation](https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial-in-python) (200 clientes) | 5 segmentos (k = 5; silueta 0,555; ARI de estabilidad 0,993 en submuestras) |
+| 2 | Clustering jerárquico (enlace `ward`) | [Country Data](https://www.kaggle.com/datasets/rohan0301/unsupervised-learning-on-country-data) (subconjunto de 35 países) | 3 grupos (silueta 0,416); Chile se agrupa primero con Uruguay y Costa Rica |
+
+**Decisiones clave**
+- Se excluyen `CustomerID` y `Gender` de la distancia y se usan para describir los grupos.
+- Se estandarizan las variables: en el ejercicio 2, sin escalar, `income` y `gdpp` dominan la distancia y el dendrograma se reduce a un orden por ingreso.
+- El número de grupos se elige con más de una evidencia (silueta, estabilidad, saltos de altura y utilidad), no solo con una métrica.
+- K-means y `ward` coinciden en 34 de 35 países (ARI = 0,878); solo cambia Kenia.
+
+**Limitaciones:** pocas variables en el ejercicio 1; en el ejercicio 2 el subconjunto de 35 países no es representativo y el grupo grande (29 países) es heterogéneo.
+
+**Cómo ejecutarlo:** abrir el notebook en Google Colab y guardar el token de Kaggle en los Secretos de Colab con el nombre `KAGGLE_API_TOKEN`.
+
+**Librerías:** `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`, `scipy`, `kagglehub`.
